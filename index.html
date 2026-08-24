@@ -6,7 +6,7 @@
     <body>
         <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 
-        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgL00000VzCLl" method="POST">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgL00000VzCLl" method="POST" onsubmit="beforeSubmit()">
 
         <input type=hidden name="oid" value="00DgL00000VzCLl">
         <input type=hidden name="retURL" value="">
@@ -17,13 +17,20 @@
 
         <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
 
-        Lead Date:<span class="dateInput dateOnlyInput"><input  id="00NgL00004oBiwr" name="00NgL00004oBiwr" size="12" type="text" /></span><br>
+        Lead Date
+        <input type="date" name="inputdate" class="inputdate" required="true">
+        <!--<span class="dateInput dateOnlyInput"><input  id="00NgL00004oBiwr" name="00NgL00004oBiwr" size="12" type="text" /></span>-->
+        <br>
 
         <input type="hidden"  id="lead_source" name="lead_source" value="Web" /><br>
+
+        <input type="hidden"  id="Lead_Date__c" name="Lead_Date__c" class="outputdate" /><br>
 
         <input type="submit" name="submit">
 
         </form>
+
+        <script src="script.js"></script>
 
     </body>
 </html>
